@@ -3,6 +3,7 @@ defmodule Euler.Mixfile do
 
   def project do
     [app: :euler,
+     escript: escript_config,
      version: "0.1.0",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
@@ -28,5 +29,9 @@ defmodule Euler.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     []
+  end
+
+  defp escript_config do
+    [ main_module: Euler ]
   end
 end
