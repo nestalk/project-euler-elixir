@@ -11,7 +11,10 @@ defmodule Euler.Problem2 do
         44
     """
     def run(limit) when is_number(limit) do
-        fibonacci =  Stream.unfold({0,1}, fn {f1, f2} -> {f1,{f2, f1+f2}} end)
+        fibonacci = 
+            Stream.unfold {0,1}, fn {f1, f2} -> 
+                {f1,{f2, f1+f2}} 
+            end
 
         fibonacci
         |> Stream.filter(&(rem(&1,2)==0))
