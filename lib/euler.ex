@@ -9,5 +9,8 @@ defmodule Euler do
 
     IO.puts("\nProblem 3")
     IO.puts(Euler.Problem3.run(600851475143))
+
+    IO.puts("\nProblem 4")
+    IO.puts(Euler.Problem4.run(999))
   end
 end
