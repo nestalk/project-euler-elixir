@@ -11,8 +11,7 @@ defmodule Euler.Problem4 do
   """
   def palindrome?(num) when is_number(num) do
     str = Integer.to_string(num)
-    {split1, split2} = String.split_at(str, div(String.length(str),2))
-    split1 == String.reverse(split2)
+    str == String.reverse(str)
   end
 
   @doc """
